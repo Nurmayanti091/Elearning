@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="pagetitle">
-        <h1>Student</h1>
+        <h1>Course</h1>
         <nav>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="/admin/dashboard">Home</a></li>
@@ -15,25 +15,23 @@
     <section class="section">
         <div class="card">
             <div class="card-body py-4">
-                <a href="/student/create" class="btn btn-primary m-3">+Student</a>
+                <a href="/courses/create" class="btn btn-primary m-3">+Courses</a>
                 <div class="table-responsive">
                     <table class="table">
                         <tr>
                             <th>No</th>
                             <th>Nama</th>
-                            <th>NIM</th>
-                            <th>Major</th>
-                            <th>Class</th>
+                            <th>Category</th>
+                            <th>Desc</th>
                             <th>Action</th>
                         </tr>
 
-                        @foreach ($students as $student)
+                        @foreach ($courses as $course)
                             <tr>
                                 <td>{{ $loop->iteration }}</td>
-                                <td>{{ $student->name }}</td>
-                                <td>{{ $student->nim }}</td>
-                                <td>{{ $student->major }}</td>
-                                <td>{{ $student->class }}</td>
+                                <td>{{ $course->name }}</td>
+                                <td>{{ $course->category }}</td>
+                                <td>{{ $course->desc }}</td>
                                 <td>
                                     <a href="#" class="btn btn-warning">Edit</a>
                                     <a href="#" class="btn btn-danger">hapus</a>
