@@ -10,4 +10,9 @@ class Student extends Model
     use HasFactory;
 
     protected $table = 'students';
+
+
+
+    //mendefinisikan field atau tabel apa aja yang boleh di isi
+    protected $fillable =['name','nim','major','class'];
 }
