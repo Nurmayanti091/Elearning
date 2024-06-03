@@ -12,6 +12,7 @@ abstract class Controller
         //unutk mendapatkan data student dari database
        $students = Student::all();
 
+     
 
        //panggil view dan kirim data ke view 
        return view('admin.contents.student.index',[
