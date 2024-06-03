@@ -33,6 +33,7 @@ Route::get('admin/student',[StudentController::class,'index']);
 //route untuk menampilkan courses
 Route::get('admin/courses',[CoursesController::class,'index']);
 
+
 //route untuk menampilkan form tambah student
 Route::get('admin/student/create',[StudentController::class,'create']);
 
@@ -49,4 +50,30 @@ Route::put('admin/student/update/{id}',[StudentController::class,'update']);
 
 //root untuk menghapus student 
 Route::delete('admin/student/delete/{id}',[StudentController::class,'destroy']);
+
+
+
+//root untuk menampilkan form tambah course
+Route::get('admin/courses/create',[CoursesController::class,'create']);
+
+//root untuk megirim data courses tambah 
+Route::post('admin/courses/store',[CoursesController::class,'store']);
+
+//root menmapilkan data /halaman edit course
+Route::get('admin/courses/edit/{id}',[CoursesController::class,'edit']);
+
+//root untuk menyimpan hasil update courses
+Route::put('admin/courses/update/{id}',[CoursesController::class,'update']);
+
+//root untuk menghapus courses
+Route::delete('admin/courses/delete/{id}',[CoursesController::class,'destroy']);
+
+
+
+
+
+
+
+
+
 

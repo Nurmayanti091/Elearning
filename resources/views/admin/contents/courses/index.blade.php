@@ -15,7 +15,7 @@
     <section class="section">
         <div class="card">
             <div class="card-body py-4">
-                <a href="/courses/create" class="btn btn-primary m-3">+Courses</a>
+                <a href="/admin/courses/create" class="btn btn-primary mt-4">+Courses</a>
                 <div class="table-responsive">
                     <table class="table">
                         <tr>
@@ -32,9 +32,9 @@
                                 <td>{{ $course->name }}</td>
                                 <td>{{ $course->category }}</td>
                                 <td>{{ $course->desc }}</td>
-                                <td>
-                                    <a href="#" class="btn btn-warning">Edit</a>
-                                    <a href="#" class="btn btn-danger">hapus</a>
+                                <td class="d-flex">
+                                    <a href="/admin/courses/edit" class="btn btn-primary">Edit</a>
+                                    <a href="/admin/courses/" class="btn btn-danger">Hapus</a>
                                 </td>
                             </tr>
                         @endforeach
