@@ -52,10 +52,10 @@ class StudentController extends Controller
     public function edit ($id){
         //cari  data student berdasarkan id 
         $student =Student::find($id);  //SELECT * FROM WHERE id = $id;
-
+        $courses = Courses::all();
         //kirim student ke view edit 
         return view('admin.contents.student.edit',[
-            'student' => $student,
+            'student' => $student ,'courses'=> $courses
         ]);
    }
 
