@@ -181,7 +181,7 @@
                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
                      <li class="dropdown-header">
                          <h6>{{Auth::user()->name}}</h6>
-                         <span>{{Auth::user()->email}}</span>
+                         <span>Login sebagai : {{Auth::user()->role}}</span>
                      </li>
                      <li>
                          <hr class="dropdown-divider">

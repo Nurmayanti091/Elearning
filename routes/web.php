@@ -26,7 +26,7 @@ use App\Http\Controllers\StudentController;
 Route::get('admin/dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware('auth');
 
 //route untuk menampilkan student 
-Route::get('admin/student',[StudentController::class,'index']);
+Route::get('admin/student',[StudentController::class,'index'])->middleware('admin');
 
 //route untuk menampilkan courses
 Route::get('admin/courses',[CoursesController::class,'index']);
